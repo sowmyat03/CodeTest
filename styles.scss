@@ -1,0 +1,115 @@
+$white:#FFFFFF;
+$gray: #18191F;
+$purple:#8C30F5;
+
+@mixin flex{
+    display: flex;
+    align-items: center;
+}
+*{
+    box-sizing: border-box;
+    padding:0;
+}
+body{
+    background-color: $white;
+    font-family: 'Manrope',sans-serif;
+}
+.hero-section{
+    @include flex;
+    flex-direction: column;
+    background: url(images/Background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+header{
+    height:72px;
+    @include flex;
+    flex-direction: row;
+    width:1110px;
+    justify-content: space-between;
+    
+}
+.left-nav{
+    @include flex;
+    flex-direction: row;
+    position:relative;
+    top: calc(50% - 28px/2);
+    left: 70px;
+    width:570px;
+}
+nav{
+    .logo{
+        margin-right: 32px;
+    }
+    ul{
+        @include flex;
+        flex-direction: row;
+        list-style-type: none;
+        height: 20px;
+        li{
+            a{
+                text-decoration:none;
+                margin-right: 32px;
+                font-weight: 700;
+                font-size: 14px;
+                color:$gray;
+            }  
+            div{
+                outline: none;
+                button{
+                    outline: none;
+                }
+            } 
+        }
+    }
+}
+.right-nav{
+    width:282px;
+    top: calc(50% - 40px/2 + 0px);
+    position:relative;
+    
+}
+//Hero Content styling
+section{
+    @include flex;
+    flex-direction: row;
+    position: relative;
+    width:1110px;
+    left:70px;
+
+}
+section{
+    article{
+        @include flex;
+        align-items: flex-start;
+        flex-direction: column;
+        h1{
+            position: relative;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 72px;
+            margin-bottom: 32px;
+            
+        }
+        .btn{
+            background: $purple;
+            border-radius: 8px;
+            padding:12px;
+        }
+        a{
+            font-style: normal;
+            font-weight: 700;
+            color:$white;
+            text-align: center;
+            font-size: 20px;
+            text-decoration: none;
+        }
+    }
+    .phone-mockup{
+        position: relative;
+        width: 350px;
+        height: 640px;
+        right:70px;
+        top:120px;
+    }
+}
